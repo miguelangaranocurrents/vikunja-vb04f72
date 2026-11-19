@@ -350,6 +350,9 @@ const projectId = toRef(props, 'projectId')
 const DRAG_OPTIONS = {
 	// sortable options
 	animation: 150,
+	// Sortable's default edge zone is 30px, too thin to reliably reach a bucket
+	// off screen with the pointer; a wider zone makes board auto-scroll dependable.
+	scrollSensitivity: 80,
 	ghostClass: 'ghost',
 	dragClass: 'task-dragging',
 	delayOnTouchOnly: true,
